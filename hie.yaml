@@ -1,0 +1,19 @@
+cradle:
+  stack:
+    - path: './main'
+      component: 'haskell-examples:exe:haskell-examples-exe'
+    - path: './src'
+      component: 'haskell-examples:exe:haskell-examples-exe'
+  cabal:
+    - path: './main'
+      component: 'haskell-examples:exe:haskell-examples-exe'
+    - path: './src'
+      component: 'haskell-examples:exe:haskell-examples-exe'
+  multi:
+    - path: './Setup.hs'
+      config:
+        cradle:
+          direct:
+            arguments:
+              - "-package Cabal"
+              - "-package base"
